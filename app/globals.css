@@ -1,21 +1,168 @@
 @import "tailwindcss";
 
+/* 
+  #121113 -> بک گراند کل صفحه */
+
+/* section-bg  liner  */
+/* #121113 - 0% -
+  #212327 -60%  */
+
+/* رنگ ایکون و دکمه ها 
+  #FD6737 */
+
+/* رنگ سکندری یا کمرنگ تر از اون ایکون اصلی ها برای ایکون کتگوری استفاده شده  */
+/* FF8A65 */
+
+/* رنگ باکس های که ضمانت کالا و .. هست   */
+/* liner - بالا چپ به پایین راست */
+/* بالا چپ #271725
+#19161C پایین راست */
+
+/* خط جدا کننده و دات های برای اسلایدر  */
+/* #0DEEFF */
+/* #8D9196 رنگ دات های اسلایدر که کلیک نشده */
+
+/* رنگ کارت نظرات  */
+/* liner -  */
+/* #1A191E چپ  %0
+#251727 راست 100%*/
+
+/* بوردر */
+/* #424242  اصلی*/
+/* #FF8A65  دومی با 35 درصد اوپستی*/
+
+/* رنگ فونت  */
+/* secondry - #B3B3B3 */
+/* #EEEEF0 - تایتل و تکست ها اصلی */
+/* #E6E6E6 - برای فونت ها کوچک توی کارت ها */
+
+/* #F3F3F3  برای فونت ها کوچک توی کارت ها  و برای برخی از جاها*/
+
+/* کانتیر اصلی که تمام اجزا رو در بر میگیره  فاصله ها  */
+/* mobile390 -> padding/left/right:16 - padding/top/bottom:16
+mobile390 -> sections -> 100px */
+
+/* 768->padding/left/right:16 - padding/top/bottom:16 */
+/* sections->80 */
+
+/* 900-desktop -> padding/left/right:16 - padding/top/bottom:16 */
+/* sections->80 */
+
+/* 1440-desktop -> padding/left/right:60 - padding/top/bottom:32  */
+/* sections->50 */
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-sm5: 500px;
+  --breakpoint-sm6: 600px;
+  --breakpoint-tab: 768px;
+  --breakpoint-des: 900px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-xxl: 2000px;
+
+  /* Brand / raw tokens */
+  --color-brand-bg: #121113;
+  --color-brand-bg-section: #212327;
+  /* ------------------------ Icons & Buttons*/
+  --color-brand-primary: #fd6737;
+  --color-brand-primary-soft: #ff8a65;
+  /* ----------------------- Line and SliderDots */
+  --color-brand-accent: #0deeff;
+  --color-brand-dot: #8d9196;
+  /* ------------------ Linear BG FeatureCards */
+  --color-brand-box-start: #271725;
+  --color-brand-box-end: #19161c;
+  /* ----------------------------- Linear BG User Comments Card  */
+  --color-brand-review-start: #1a191e;
+  --color-brand-review-end: #251727;
+  /*-------------------- Border */
+  --color-brand-border: #424242;
+  --color-brand-border-soft: rgb(255 138 101 / 0.35);
+  /*--------------------- Texts Colors */
+  --color-brand-text-primary: #eeeef0;
+  --color-brand-text-secondary: #b3b3b3;
+  --color-brand-text-small: #e6e6e6;
+  --color-brand-text-soft: #f3f3f3;
+  /*----------  Container Spacing */
+  --spacing-container-x-mobile: 16px;
+  --spacing-container-y-mobile: 16px;
+  /* tab */
+  --spacing-container-x-tab: 16px;
+  --spacing-container-y-tab: 16px;
+  /* des */
+  --spacing-container-x-des: 16px;
+  --spacing-container-y-des: 16px;
+  /* 1440 */
+  --spacing-container-x-xl: 60px;
+  --spacing-container-y-xl: 32px;
+
+  /*  */
+  /*----------- Section Spacing */
+  --spacing-section-mobile: 100px;
+  --spacing-section-tablet: 80px;
+  --spacing-section-desktop: 80px;
+  --spacing-section-xl: 50px;
+  /* animate */
+  --animate-shake: shake 1s ease-in-out infinite;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* semantic tokens */
+  --background: var(--color-brand-bg);
+  --foreground: var(--color-brand-text-primary);
+  --muted-foreground: var(--color-brand-text-secondary);
+
+  --card: linear-gradient(
+    to right,
+    var(--color-brand-review-start),
+    var(--color-brand-review-end)
+  );
+
+  --feature-box: linear-gradient(
+    to bottom right,
+    var(--color-brand-box-start),
+    var(--color-brand-box-end)
+  );
+
+  --section-bg: linear-gradient(
+    180deg,
+    var(--color-brand-bg) 0%,
+    var(--color-brand-bg-section) 60%
+  );
+
+  --border: var(--color-brand-border);
+  --border-accent: var(--color-brand-border-soft);
+  --primary: var(--color-brand-primary);
+  --primary-soft: var(--color-brand-primary-soft);
+  --accent: var(--color-brand-accent);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-iran-sans);
+  --font-sans-medium: var(--font-iran-sans-medium);
+  --font-sans-light: var(--font-iran-sans-light);
+  --font-sans-bold: var(--font-iran-sans-bold);
 }
 
-
+@keyframes shake {
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-iran-sans), sans-serif;
 }
