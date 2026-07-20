@@ -57,11 +57,13 @@ mobile390 -> sections -> 100px */
   --breakpoint-sm6: 600px;
   --breakpoint-tab: 768px;
   --breakpoint-des: 900px;
+  --breakpoint-lg: 1024px;
   --breakpoint-xl: 1440px;
   --breakpoint-xxl: 2000px;
 
   /* Brand / raw tokens */
   --color-brand-bg: #121113;
+
   --color-brand-bg-section: #212327;
   /* ------------------------ Icons & Buttons*/
   --color-brand-primary: #fd6737;
@@ -98,10 +100,14 @@ mobile390 -> sections -> 100px */
 
   /*  */
   /*----------- Section Spacing */
-  --spacing-section-mobile: 100px;
+  --spacing-section-mobile: 64px;
   --spacing-section-tablet: 80px;
   --spacing-section-desktop: 80px;
   --spacing-section-xl: 50px;
+
+  /* font */
+  --font-sans: var(--font-custom), ui-sans-serif, system-ui, sans-serif;
+
   /* animate */
   --animate-shake: shake 1s ease-in-out infinite;
 }
@@ -145,11 +151,9 @@ mobile390 -> sections -> 100px */
   --color-primary: var(--primary);
   --color-primary-soft: var(--primary-soft);
   --color-accent: var(--accent);
-
-  --font-sans: var(--font-iran-sans);
-  --font-sans-medium: var(--font-iran-sans-medium);
-  --font-sans-light: var(--font-iran-sans-light);
-  --font-sans-bold: var(--font-iran-sans-bold);
+  /* fonts */
+  /* --font-sans: var(--font-iran);
+  --font-fa-num: var(--font-iran-fa-num); */
 }
 
 @keyframes shake {
@@ -164,5 +168,6 @@ mobile390 -> sections -> 100px */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-iran-sans), sans-serif;
+  /* font-family: var(--font-iran-sans), sans-serif; */
+  font-family: var(--font-sans);
 }
