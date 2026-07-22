@@ -51,6 +51,7 @@ mobile390 -> sections -> 100px */
 /* 1440-desktop -> padding/left/right:60 - padding/top/bottom:32  */
 /* sections->50 */
 
+
 @theme {
   /* Breakpoints */
   --breakpoint-sm5: 500px;
@@ -63,7 +64,9 @@ mobile390 -> sections -> 100px */
 
   /* Brand / raw tokens */
   --color-brand-bg: #121113;
-
+  /* test */
+  /* --color-brand-bg: red; */
+  /*  */
   --color-brand-bg-section: #212327;
   /* ------------------------ Icons & Buttons*/
   --color-brand-primary: #fd6737;
@@ -103,7 +106,7 @@ mobile390 -> sections -> 100px */
   --spacing-section-mobile: 64px;
   --spacing-section-tablet: 80px;
   --spacing-section-desktop: 80px;
-  --spacing-section-xl: 50px;
+  --spacing-section-xl: 120px;
 
   /* font */
   --font-sans: var(--font-custom), ui-sans-serif, system-ui, sans-serif;
