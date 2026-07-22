@@ -3,7 +3,7 @@ import React from "react";
 
 const FeatureBox = () => {
   return (
-    <main className=" border  grid justify-center lg:items-center gap-3  grid-cols-2 lg:grid-cols-4">
+    <main className="grid justify-center lg:items-center gap-3  grid-cols-2 lg:grid-cols-4">
       <div className="tab:text-[1rem] lg:h-[70%]  lg:w-full  flex items-center justify-center rounded-xl  text-[12px]   p-3 lg:p-6  des:px-[65px]   bg-linear-to-br from-brand-box-start to-[#19161C] shadow-[inset_0_0_8px_0_rgb(255_255_255/25%)]">
         <BoxTime
           size="32"

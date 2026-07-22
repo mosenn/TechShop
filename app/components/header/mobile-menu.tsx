@@ -10,7 +10,7 @@ const MobileMenu = () => {
             <li className="mx-4 border-amber-600 border flex justify-center items-center rounded-full w-[52px] h-[49px]">
               logo
             </li>
-            <li>ورد / ثبت نام</li>
+            <li>ورود / ثبت نام</li>
           </div>
           <li>
             <HamburgerMenu size="40" color="#FF8A65" />
