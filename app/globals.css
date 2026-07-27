@@ -51,7 +51,6 @@ mobile390 -> sections -> 100px */
 /* 1440-desktop -> padding/left/right:60 - padding/top/bottom:32  */
 /* sections->50 */
 
-
 @theme {
   /* Breakpoints */
   --breakpoint-sm5: 500px;
@@ -113,6 +112,7 @@ mobile390 -> sections -> 100px */
 
   /* animate */
   --animate-shake: shake 1s ease-in-out infinite;
+  --animate-SoftPulse: softPulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 :root {
@@ -158,6 +158,21 @@ mobile390 -> sections -> 100px */
   /* --font-sans: var(--font-iran);
   --font-fa-num: var(--font-iran-fa-num); */
 }
+
+@keyframes softPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* .animate-soft-pulse {
+  animation: softPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+} */
 
 @keyframes shake {
   50% {
