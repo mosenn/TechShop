@@ -1,8 +1,6 @@
-import React from "react";
-
 type props = {
   titel: string;
-  underTitle: string;
+  underTitle?: string;
   line: true;
 };
 const Titel = ({ titel, underTitle, line }: props) => {
