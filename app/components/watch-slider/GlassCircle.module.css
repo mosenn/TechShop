@@ -148,6 +148,15 @@
   width: fit-content;
   transform: translateY(-50%);
 }
+
+
+/* .heroPagination {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  z-index: 999;
+} */
+
 /* تبلت به بالا (768px به بعد) */
 @media screen and (min-width: 768px) {
   .heroPagination {

@@ -2,7 +2,7 @@
 
 import { ArrowLeft, BatteryFull, Drop, HeartAdd } from "iconsax-reactjs";
 import Image from "next/image";
-import React from "react";
+
 import styles from "./GlassCircle.module.css";
 
 import "swiper/css";
@@ -80,8 +80,10 @@ const WatchSlider = () => {
             bulletClass: styles.paginationBullet,
             bulletActiveClass: styles.paginationBulletActive,
           }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
+          // scrollbar={{ draggable: true }}
+          // onSwiper={(swiper) => {
+          //   swiperRef.current = swiper;
+          // }}
           onSlideChange={() => console.log("slide change")}
         >
           {watchSlides.map((item) => (
@@ -170,7 +172,7 @@ const WatchSlider = () => {
                       </span>
                       مشاهده و خرید
                     </button>
-                    <button className="     -brand-   w-36.5 h-11.5 rounded-lg px-2 flex justify-center items-center font-normal text-[14px]">
+                    <button className=" w-36.5 h-11.5 rounded-lg px-2 flex justify-center items-center font-normal text-[14px]">
                       جزئیات بیشتر
                     </button>
                   </div>
@@ -179,9 +181,8 @@ const WatchSlider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className={styles.heroPagination} />
       </div>
-
-      <div className={styles.heroPagination} />
     </main>
   );
 };
