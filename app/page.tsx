@@ -4,8 +4,10 @@ import Hero from "./components/hero/hero";
 import FeatureBox from "./components/feature-box/feature-box";
 import Titel from "./components/titel/titel";
 import WatchSlider from "./components/watch-slider/slider";
-import Category from "./components/product-category/category";
 import { CategoriesGrid } from "./components/product-category/grid";
+import ProductGrid from "./components/product-slider/grid";
+import TestimonialsSlider from "./components/testimonials-slider/testimonials";
+import Test from "./components/test/test";
 
 export default function Home() {
   return (
@@ -22,6 +24,14 @@ export default function Home() {
         <WatchSlider />
         {/*  */}
         <CategoriesGrid />
+        {/*  */}
+
+        <ProductGrid />
+
+        {/*  */}
+
+        <TestimonialsSlider/>
+        {/* <Test/> */}
       </main>
     </ControlSpacing>
   );
