@@ -1,0 +1,29 @@
+.testimonialSwiper {
+  padding-bottom: 34px;
+}
+
+/* کلاس نگهدارنده pagination */
+.testimonialPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* کلاس دات‌های معمولی - دقت کنید که گلوبال نیست */
+.bullet {
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* کلاس دات فعال */
+.bulletActive {
+  width: 18px;
+  background: #19d3e0;
+}
