@@ -1,13 +1,15 @@
 type props = {
-  titel: string;
+  titel?: string;
   underTitle?: string;
-  line: true;
+  line?: true;
+  h1Style?: string;
 };
-const Titel = ({ titel, underTitle, line }: props) => {
+const Titel = ({ titel, underTitle, line, h1Style }: props) => {
   return (
     <section className=" flex gap-2 items-center flex-col justify-center">
       <div className="gap-2  text-center">
-        <h1 className="text-2xl font-bold my-2 tab:my-4">
+        {/*  */}
+        <h1 className={h1Style}>
           {/* اصیل ترین ها را از ما بخواهید */}
           {titel}
         </h1>
@@ -18,7 +20,7 @@ const Titel = ({ titel, underTitle, line }: props) => {
       </div>
       {/* line */}
       {line && (
-        <div className="bg-brand-accent w-[59px] h-[5px] my-7 border border-brand-accent rounded-sm"></div>
+        <div className="bg-brand-accent w-[59px] h-[5px] my-2 border border-brand-accent rounded-sm"></div>
       )}
     </section>
   );
