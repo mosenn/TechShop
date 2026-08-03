@@ -13,10 +13,30 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const products = [
-  { id: 1, title: "گوشی هوشمند", imageSrc: "/imgs/products/pro17.png", price: "۳۵۴,۹۹۹,۰۰۰" },
-  { id: 2, title: "گوشی هوشمند", imageSrc: "/imgs/products/pro17.png", price: "۵۴,۹۹۹,۰۰۰" },
-  { id: 3, title: "گوشی هوشمند", imageSrc: "/imgs/products/pro17.png", price: "۳۴,۹۹۹,۰۰۰" },
-  { id: 4, title: "گوشی هوشمند", imageSrc: "/imgs/products/pro17.png", price: "۳۵۴,۹۹۹,۰۰۰" },
+  {
+    id: 1,
+    title: "گوشی هوشمند",
+    imageSrc: "/imgs/products/pro17.png",
+    price: "۳۵۴,۹۹۹,۰۰۰",
+  },
+  {
+    id: 2,
+    title: "گوشی هوشمند",
+    imageSrc: "/imgs/products/pro17.png",
+    price: "۵۴,۹۹۹,۰۰۰",
+  },
+  {
+    id: 3,
+    title: "گوشی هوشمند",
+    imageSrc: "/imgs/products/pro17.png",
+    price: "۳۴,۹۹۹,۰۰۰",
+  },
+  {
+    id: 4,
+    title: "گوشی هوشمند",
+    imageSrc: "/imgs/products/pro17.png",
+    price: "۳۵۴,۹۹۹,۰۰۰",
+  },
 ];
 
 const ProductGrid = () => {
@@ -36,7 +56,11 @@ const ProductGrid = () => {
 
   return (
     <main className="w-full overflow-hidden">
-      <Titel line={true} titel="محصولات پر طرفدار" />
+      <Titel
+        line={true}
+        titel="محصولات پر طرفدار"
+        h1Style="text-2xl font-bold my-2 tab:my-4"
+      />
 
       <section className="my-4 flex w-full justify-end gap-4 p-2">
         <motion.button
@@ -64,7 +88,10 @@ const ProductGrid = () => {
             },
           }}
         >
-          <ArrowCircleLeft color={nextDisabled ? "#9CA3AF" : "#FF8A65"} size={42} />
+          <ArrowCircleLeft
+            color={nextDisabled ? "#9CA3AF" : "#FF8A65"}
+            size={42}
+          />
         </motion.button>
 
         <motion.button
@@ -92,7 +119,10 @@ const ProductGrid = () => {
             },
           }}
         >
-          <ArrowCircleRight color={prevDisabled ? "#9CA3AF" : "#FF8A65"} size={42} />
+          <ArrowCircleRight
+            color={prevDisabled ? "#9CA3AF" : "#FF8A65"}
+            size={42}
+          />
         </motion.button>
       </section>
 
@@ -125,7 +155,10 @@ const ProductGrid = () => {
                 className="product-swiper"
               >
                 {products.map((product) => (
-                  <SwiperSlide key={product.id} className="box-border px-2 py-2">
+                  <SwiperSlide
+                    key={product.id}
+                    className="box-border px-2 py-2"
+                  >
                     <div className="flex justify-center">
                       <ProductCard {...product} />
                     </div>

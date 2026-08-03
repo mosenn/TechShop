@@ -1,0 +1,377 @@
+.section {
+  width: 100%;
+  padding: 24px 0;
+  direction: rtl;
+  background: #0b0b10;
+  color: #f5f5f5;
+
+  overflow: hidden;
+}
+
+.sliderShell {
+  position: relative;
+  width: min(100% - 32px, 1180px);
+  min-height: 500px;
+  margin-inline: auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.slide {
+  height: auto;
+}
+
+.article {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+  min-height: 490px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 7px;
+  background: #17181c;
+}
+
+.visualColumn {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.imageStage {
+  position: relative;
+  width: min(100%, 650px);
+  aspect-ratio: 1.55;
+  transform: translateZ(0);
+}
+
+.imagePanel {
+  position: absolute;
+  overflow: hidden;
+  background: #eee3d8;
+  transition:
+    transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    clip-path 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.imagePanel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.panelOne {
+  inset: 0 50% 0 0;
+  clip-path: polygon(0 0, 88% 0, 78% 100%, 0 100%);
+  transform: translate(-9px, -5px) rotate(-1deg);
+}
+
+.panelTwo {
+  inset: 0 25% 0 25%;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+  transform: translate(3px, 5px) rotate(1deg);
+}
+
+.panelThree {
+  inset: 0 0 0 50%;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+  transform: translate(10px, -3px) rotate(-1deg);
+}
+
+.panelFour {
+  display: none;
+}
+
+.imagePanel img {
+  object-position: center;
+}
+
+.panelOne img {
+  left: 0;
+  width: 200%;
+}
+
+.panelTwo img {
+  left: -50%;
+  width: 200%;
+}
+
+.panelThree img {
+  left: -100%;
+  width: 200%;
+}
+
+.imageStage:hover .panelOne,
+.activeStage:hover .panelOne {
+  transform: translate(0, 0) rotate(0);
+}
+
+.imageStage:hover .panelTwo,
+.activeStage:hover .panelTwo {
+  transform: translate(0, 0) rotate(0);
+}
+
+.imageStage:hover .panelThree,
+.activeStage:hover .panelThree {
+  transform: translate(0, 0) rotate(0);
+}
+
+.contentColumn {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(24px, 4vw, 56px) clamp(22px, 5vw, 70px);
+  text-align: right;
+}
+
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.headingBlock h2 {
+  max-width: 370px;
+  margin: 0;
+  font-size: clamp(23px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.headingLine {
+  width: 42px;
+  height: 3px;
+  border-radius: 20px;
+  background: #19d3e0;
+}
+
+.textBlock {
+  display: grid;
+  gap: 16px;
+  max-width: 330px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.textBlock p,
+.textBlock strong {
+  margin: 0;
+  font-weight: 400;
+}
+
+.textBlock strong {
+  color: #fff;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 10px;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.socialLinks,
+.desktopControls,
+.mobileTopControls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.socialLinks button,
+.desktopControls button,
+.mobileTopControls button {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #ff8a65;
+  border-radius: 50%;
+  color: #ff8a65;
+  background: transparent;
+  cursor: pointer;
+}
+
+.desktopControls {
+  direction: ltr;
+}
+
+.mobileTopControls {
+  display: none;
+}
+
+.pagination {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transform: translateX(-50%);
+}
+
+.pagination :global(.swiper-pagination-bullet) {
+  width: 5px;
+  height: 5px;
+  margin: 0;
+  opacity: 0.5;
+  background: #fff;
+}
+
+.pagination :global(.swiper-pagination-bullet-active) {
+  width: 22px;
+  border-radius: 10px;
+  opacity: 1;
+  background: #19d3e0;
+}
+
+.floatingPiece {
+  position: absolute;
+  right: 25%;
+  bottom: -35px;
+  width: 110px;
+  height: 2px;
+  background: #19d3e0;
+  opacity: 0.35;
+  filter: blur(1px);
+  animation: floating 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 12px 0;
+  }
+
+  .sliderShell {
+    width: min(100% - 32px, 390px);
+    min-height: 0;
+  }
+
+  .article {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .mobileTopControls {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    z-index: 5;
+    display: flex;
+    direction: ltr;
+  }
+
+  .visualColumn {
+    order: 2;
+    min-height: 220px;
+    padding: 12px 10px 18px;
+  }
+
+  .contentColumn {
+    order: 1;
+    min-height: 270px;
+    padding: 30px 24px 18px;
+  }
+
+  .headingBlock {
+    align-items: center;
+    text-align: center;
+  }
+
+  .headingBlock h2 {
+    max-width: 270px;
+    font-size: 20px;
+    line-height: 1.65;
+  }
+
+  .textBlock {
+    max-width: none;
+    font-size: 10px;
+    line-height: 1.9;
+    text-align: right;
+  }
+
+  .meta {
+    align-items: flex-end;
+    font-size: 8px;
+  }
+
+  .desktopControls {
+    display: none;
+  }
+
+  .imageStage {
+    width: 100%;
+    aspect-ratio: 1.4;
+  }
+
+  .panelOne {
+    inset: 0 50% 0 0;
+  }
+
+  .panelTwo {
+    inset: 0 25% 0 25%;
+  }
+
+  .panelThree {
+    inset: 0 0 0 50%;
+  }
+
+  .floatingPiece {
+    right: 50%;
+    bottom: -19px;
+    width: 35px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .article {
+    grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.75fr);
+  }
+
+  .contentColumn {
+    padding: 32px;
+  }
+
+  .headingBlock h2 {
+    font-size: 28px;
+  }
+}
+
+/* تعریف انیمیشن‌های شناور در فایل CSS */

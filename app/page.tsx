@@ -7,7 +7,7 @@ import WatchSlider from "./components/watch-slider/slider";
 import { CategoriesGrid } from "./components/product-category/grid";
 import ProductGrid from "./components/product-slider/grid";
 import TestimonialsSlider from "./components/testimonials-slider/testimonials";
-import Test from "./components/test/test";
+import TechnologyNewsSlider from "./components/news/News";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
           line={true}
           titel="اصیل ترین ها را از ما بخواهید "
           underTitle="مقایسه کنید بهترین تجربه خرید با ما همیشه همراه شما هستیم "
+          h1Style="text-2xl font-bold my-2 tab:my-4"
         />
         <WatchSlider />
         {/*  */}
@@ -30,8 +31,10 @@ export default function Home() {
 
         {/*  */}
 
-        <TestimonialsSlider/>
+        <TestimonialsSlider />
         {/* <Test/> */}
+
+        <TechnologyNewsSlider />
       </main>
     </ControlSpacing>
   );
