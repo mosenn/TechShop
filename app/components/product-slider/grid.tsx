@@ -59,7 +59,7 @@ const ProductGrid = () => {
       <Titel
         line={true}
         titel="محصولات پر طرفدار"
-        h1Style="text-2xl font-bold my-2 tab:my-4"
+        h1Style="text-2xl font-bold"
       />
 
       <section className="my-4 flex w-full justify-end gap-4 p-2">
