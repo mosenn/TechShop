@@ -8,6 +8,7 @@ import { CategoriesGrid } from "./components/product-category/grid";
 import ProductGrid from "./components/product-slider/grid";
 import TestimonialsSlider from "./components/testimonials-slider/testimonials";
 import TechnologyNewsSlider from "./components/news/News";
+import BlogGrid from "./components/blog/grid";
 
 export default function Home() {
   return (
@@ -32,9 +33,12 @@ export default function Home() {
         {/*  */}
 
         <TestimonialsSlider />
-        {/* <Test/> */}
+{/*  */}
 
         <TechnologyNewsSlider />
+
+        {/*  */}
+        <BlogGrid/>
       </main>
     </ControlSpacing>
   );
