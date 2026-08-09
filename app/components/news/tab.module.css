@@ -23,3 +23,174 @@
 .animateFloatB { animation: floatB 4s ease-in-out infinite; }
 .animateFloatC { animation: floatC 4s ease-in-out infinite; }
 .animateFloatD { animation: floatD 4s ease-in-out infinite; }
+
+
+/*  */
+
+
+.mosaicLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- image transition: next ---------- */
+
+.mosaicEnterFromRight figure {
+  animation: mosaicEnterFromRight 650ms cubic-bezier(0.22, 1, 0.36, 1)
+    forwards !important;
+}
+
+.mosaicExitToLeft figure {
+  animation: mosaicExitToLeft 520ms ease-in forwards !important;
+}
+
+/* ---------- image transition: previous ---------- */
+
+.mosaicEnterFromLeft figure {
+  animation: mosaicEnterFromLeft 650ms cubic-bezier(0.22, 1, 0.36, 1)
+    forwards !important;
+}
+
+.mosaicExitToRight figure {
+  animation: mosaicExitToRight 520ms ease-in forwards !important;
+}
+
+/*
+  اختلاف delayها باعث می‌شود پنل‌ها یک‌زمان حرکت نکنند
+  و حس شطرنجی / قطعه‌قطعه ایجاد شود.
+*/
+.mosaicEnterFromRight figure:nth-child(1),
+.mosaicEnterFromLeft figure:nth-child(1) {
+  animation-delay: 0ms !important;
+}
+
+.mosaicEnterFromRight figure:nth-child(2),
+.mosaicEnterFromLeft figure:nth-child(2) {
+  animation-delay: 70ms !important;
+}
+
+.mosaicEnterFromRight figure:nth-child(3),
+.mosaicEnterFromLeft figure:nth-child(3) {
+  animation-delay: 130ms !important;
+}
+
+.mosaicEnterFromRight figure:nth-child(4),
+.mosaicEnterFromLeft figure:nth-child(4) {
+  animation-delay: 190ms !important;
+}
+
+.mosaicEnterFromRight figure:nth-child(5),
+.mosaicEnterFromLeft figure:nth-child(5) {
+  animation-delay: 250ms !important;
+}
+
+.mosaicEnterFromRight figure:nth-child(6),
+.mosaicEnterFromLeft figure:nth-child(6) {
+  animation-delay: 310ms !important;
+}
+
+.mosaicEnterFromRight figure:nth-child(7),
+.mosaicEnterFromLeft figure:nth-child(7) {
+  animation-delay: 370ms !important;
+}
+
+@keyframes mosaicEnterFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(110px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mosaicEnterFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-110px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mosaicExitToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes mosaicExitToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+/* ---------- normal text slide ---------- */
+
+.textSlide {
+  animation-duration: 420ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.textEnterFromRight {
+  animation-name: textEnterFromRight;
+}
+
+.textEnterFromLeft {
+  animation-name: textEnterFromLeft;
+}
+
+@keyframes textEnterFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes textEnterFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* احترام به تنظیمات کاربر برای کاهش حرکت */
+@media (prefers-reduced-motion: reduce) {
+  .mosaicEnterFromRight figure,
+  .mosaicEnterFromLeft figure,
+  .mosaicExitToLeft figure,
+  .mosaicExitToRight figure,
+  .textSlide {
+    animation: none !important;
+  }
+}
