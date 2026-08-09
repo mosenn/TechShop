@@ -246,7 +246,7 @@ const NewsTablet = () => {
   );
 
   return (
-    <main className="hidden tab:grid bg-linear-to-b from-brand-bg via-brand-bg-section/60 to-brand-bg-section/60 rounded-xl border border-[#565656]">
+    <main className="hidden tab:grid bg-linear-to-b from-brand-bg via-brand-bg-section/60 to-brand-bg-section/60 rounded-xl border border-[#565656] ">
       {/* Tablet Layout */}
       <div className="gap-5 flex flex-col p-2 xl:hidden">
         <Titel

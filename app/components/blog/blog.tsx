@@ -23,7 +23,7 @@ const BlogCard = ({
 }: Props) => {
   return (
     <section className=" flex gap-4 w-full flex-col items-center bg-[#02050A]">
-      <figure className=" w-full relative  aspect-video border border-green-300">
+      <figure className=" w-full relative  aspect-video ">
         <Image
           fill
           className="object-cover w-full h-full"
@@ -31,13 +31,13 @@ const BlogCard = ({
           alt={title}
         />
       </figure>
-      <div className="border border-red-800 w-full text-right  text-shadow-brand-text-small text-sm font-light">
+      <div className="w-full text-right  text-shadow-brand-text-small text-sm font-light">
         <p className="text-white text-xs">
           <span>نویسنده</span> {author} / <span>{read}</span>
         </p>
       </div>
 
-      <div className="text-right flex justify-end font-bold text-lg  border w-full ">
+      <div className="text-right flex justify-end font-bold text-lg   w-full ">
         <p className="w-62.5">{title}</p>
       </div>
       {/*  */}
@@ -46,7 +46,7 @@ const BlogCard = ({
       </div>
       {/*  */}
       <div
-        className="border w-full text-xs font-light flex justify-between items-center"
+        className=" w-full text-xs font-light flex justify-between items-center"
         style={{ direction: "rtl" }}
       >
         <p>
