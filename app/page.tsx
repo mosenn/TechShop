@@ -9,6 +9,7 @@ import ProductGrid from "./components/product-slider/grid";
 import TestimonialsSlider from "./components/testimonials-slider/testimonials";
 import TechnologyNewsSlider from "./components/news/News";
 import BlogGrid from "./components/blog/grid";
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
   return (
@@ -39,6 +40,8 @@ export default function Home() {
 
         {/*  */}
         <BlogGrid/>
+          {/*  */}
+          <Footer/>
       </main>
     </ControlSpacing>
   );
