@@ -72,14 +72,6 @@ const BlogGrid = () => {
 
   return (
     <main className="w-full flex flex-col gap-4 p-4 bg-linear-to-b from-brand-bg via-brand-bg-section/60 to-brand-bg-section/60 rounded-xl border border-[#565656] overflow-hidden">
-      <Titel
-        titel="قبل از انتخاب نهایی، هوشمندانه بررسی کنید"
-        underTitle={`با خواندن تحلیل‌های تخصصی و تجربیات کاربران،
-            خریدی آگاهانه و بدون تردید را تجربه کنید`}
-        h1Style="text-2xl font-bold text-right  tab:text-center p-1"
-        underTitleStyle="text-right font-normal text-sm leading-[25px]"
-      />
-
       <section className="flex w-full justify-end gap-4 ">
         <motion.button
           type="button"
@@ -166,7 +158,7 @@ const BlogGrid = () => {
                   600: { slidesPerView: 1.2 },
                   700: { slidesPerView: 1.5 },
                   768: { slidesPerView: 2.1 },
-                  900: { slidesPerView: 3 },
+                  900: { slidesPerView: 2.1 },
                   1024: { slidesPerView: 3 },
                   1280: { slidesPerView: 3 },
                   1440: { slidesPerView: 3 },

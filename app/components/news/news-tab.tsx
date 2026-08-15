@@ -249,13 +249,8 @@ const NewsTablet = () => {
     <main className="hidden tab:grid bg-linear-to-b from-brand-bg via-brand-bg-section/60 to-brand-bg-section/60 rounded-xl border border-[#565656] ">
       {/* Tablet Layout */}
       <div className="gap-5 flex flex-col p-2 xl:hidden">
-        <Titel
-          titel="خبر های تکنولوژی رو دنبال کنید"
-          line={true}
-          h1Style="text-[36px] font-medium my-0"
-        />
 
-        <section className="relative mx-auto aspect-video w-full tab:max-w-175 des:max-w-[97%] lg:max-w-[80%] bg-transparent">
+        <section className="relative my-4 mx-auto aspect-video w-full tab:max-w-175 des:max-w-[97%] lg:max-w-[80%] bg-transparent">
           {NewsImageSlider}
         </section>
       </div>

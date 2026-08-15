@@ -22,7 +22,7 @@ const BlogCard = ({
   date,
 }: Props) => {
   return (
-    <section className=" flex gap-4 w-full flex-col items-center bg-[#02050A]">
+    <section className=" flex gap-4 w-full flex-col items-center bg-[#02050A] tab:border border-amber-600/20 rounded-lg tab:p-4">
       <figure className=" w-full relative  aspect-video ">
         <Image
           fill
@@ -46,7 +46,7 @@ const BlogCard = ({
       </div>
       {/*  */}
       <div
-        className=" w-full text-xs font-light flex justify-between items-center"
+        className=" w-full text-xs font-light flex justify-between items-center "
         style={{ direction: "rtl" }}
       >
         <p>

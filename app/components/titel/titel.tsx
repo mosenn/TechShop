@@ -10,12 +10,14 @@ const Titel = ({ titel, underTitle, underTitleStyle, line, h1Style }: props) => 
     <section className=" flex  items-center flex-col justify-center">
       <div className=" text-center">
         {/*  */}
-        <h1 className={h1Style}>
+        {/* className={h1Style} */}
+        <h1 className={`text-2xl ${underTitle ? "my-2" : "my-0"}` }>
           {/* اصیل ترین ها را از ما بخواهید */}
           {titel}
         </h1>
         {/* text-xl font-normal */}
-        <h2 className={underTitleStyle}>
+        {/* className={underTitleStyle} */}
+        <h2 >
           {/* مقایسه کنید بهترین تجربه خرید با ما همیشه همراه شما هستیم */}
           {underTitle}
         </h2>

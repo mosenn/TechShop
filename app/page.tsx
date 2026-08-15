@@ -10,6 +10,7 @@ import TestimonialsSlider from "./components/testimonials-slider/testimonials";
 import TechnologyNewsSlider from "./components/news/News";
 import BlogGrid from "./components/blog/grid";
 import Footer from "./components/footer/Footer";
+import RenderBlog from "./components/blog/RenderBlog";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
         <TechnologyNewsSlider />
 
         {/*  */}
-        <BlogGrid/>
+        <RenderBlog/>
           {/*  */}
           <Footer/>
       </main>

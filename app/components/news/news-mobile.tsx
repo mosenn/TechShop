@@ -19,11 +19,7 @@ const NewsMobile = () => {
         <ArrowCircleLeft color={"#FF8A65"} size={42} />
         <ArrowCircleRight color={"#FF8A65"} size={42} />
       </div>
-      <Titel
-        line={true}
-        titel="خبر های تکنولوژی رو دنبال کنید "
-        h1Style="text-[32px] px-5 font-normal my-2"
-      />
+   
 
       <section
         className="relative aspect-video w-[95%] bg-transparent group my-6"
