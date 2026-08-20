@@ -1,13 +1,34 @@
+"use client";
 import { ArrowLeft } from "iconsax-reactjs";
-import React from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const DesktopHero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // مدت زمان انیمیشن (اختیاری)
+      once: true, // اجرای انیمیشن فقط یک‌بار هنگام اسکرول (اختیاری)
+    });
+  }, []);
+
   return (
     <main className=" h-screen hidden xl:flex relative   flex-col tab:flex-row justify-center items-center ">
       {/* image */}
       <div className="relative    w-182 h-[760.81px] mb-37.5">
-        <div className="bg-[url('/imgs/hero/mobile-2.png')] w-[420.59px] h-[698.38px]    bg-cover bg-center bg-no-repeat absolute "></div>
-        <div className="bg-[url('/imgs/hero/mobile-1.png')] w-[420.59px] h-[698.38px]   bg-cover bg-center bg-no-repeat relative z-10 translate-x-52.5 "></div>
+        <div
+          className="bg-[url('/imgs/hero/mobile-2.png')] w-[420.59px] h-[698.38px]    bg-cover bg-center bg-no-repeat absolute 
+        
+        "
+          data-aos="fade-right"
+          data-aos-duration="3000"
+        ></div>
+        <div
+          className="bg-[url('/imgs/hero/mobile-1.png')] w-[420.59px] h-[698.38px]   bg-cover bg-center bg-no-repeat relative z-10 translate-x-52.5 "
+          data-aos="fade-left"
+          data-aos-duration="2200"
+        ></div>
       </div>
       {/* text & buttons */}
       <section className="flex flex-col  w-[40%]">

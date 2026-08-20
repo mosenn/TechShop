@@ -1,23 +1,46 @@
+"use client";
 import { ArrowLeft } from "iconsax-reactjs";
 import Image from "next/image";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const MobileHero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // مدت زمان انیمیشن (اختیاری)
+      once: true, // اجرای انیمیشن فقط یک‌بار هنگام اسکرول (اختیاری)
+    });
+  }, []);
+
   return (
     <main className=" grid tab:grid-cols-2 items-start xl:hidden  relative ">
+      {/* <div className="h-screen" data-aos="fade-in">
+        mohsen
+      </div> */}
       {/* title for mobile 390*/}
-      <div className="tab:hidden  flex  w-full justify-center top-[-7px]  sm5:top-[-55px]  absolute z-10">
+      <div
+        className="  tab:hidden  flex  w-full justify-center top-[-7px]  sm5:top-[-55px]  absolute z-10"
+        data-aos="fade-in"
+      >
         <h1 className=" w-full max-w-[350px]  text-[48px]  text-center ">
           تکنولوژی در دستان تو{" "}
         </h1>
       </div>
       {/* image */}
       {/* translate-y-[-200px] */}
-      <figure className=" h-screen     tab:translate-y-[-100px]  sm5:flex justify-center ">
+      <figure
+        className=" h-screen   flex justify-center    tab:translate-y-[-100px]    "
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <Image
           // src="/imgs/hero/mobil1.png"
+          className="border object-contain"
           src="/imgs/hero/mobile-1.png"
-          width={456}
-          height={631}
+          width={340}
+          height={340}
           alt="galexy"
         />
       </figure>

@@ -189,3 +189,110 @@ body {
   /* font-family: var(--font-iran-sans), sans-serif; */
   font-family: var(--font-sans);
 }
+
+.draw-icon path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-line 4.5s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* verify icon animate*/
+/* تنظیم کلی انیمیشن پیوسته */
+.animate-draw-infinite path {
+  fill: none;
+  /* animation-duration: 3.6s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-iteration-count: infinite; */
+}
+
+/* ۱. چین‌چین‌های دور (path دوم در SVG) */
+.animate-draw-infinite path:last-child {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  /* animation-name: drawBorderLoop; */
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation: drawBorderLoop 3.6s both infinite;
+}
+
+/* ۲. تیک درون آیکون (path اول در SVG) که با تاخیر رسم می‌شود */
+.animate-draw-infinite path:first-child {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: drawCheckLoop 4s ease-in-out both infinite;
+}
+
+/* انیمیشن کادر دور: از ثانیه ۰ شروع به کشیدن می‌کند */
+@keyframes drawBorderLoop {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0.2;
+  }
+  35%,
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  90%,
+  100% {
+    stroke-dashoffset: -100;
+    opacity: 0.2;
+  }
+}
+
+/* انیمیشن تیک وسط: منتظر می‌ماند تا کادر دور کشیده شود (از ۳۰٪ به بعد رسم می‌شود) */
+@keyframes drawCheckLoop {
+  0%,
+  28% {
+    stroke-dashoffset: 18;
+    opacity: 0;
+  }
+  48%,
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  90%,
+  100% {
+    stroke-dashoffset: -18;
+    opacity: 0;
+  }
+}
+
+/* head phone animate */
+
+/* انیمیشن رسم آیکون هدفون */
+/* headphone icon animate */
+.animate-draw-headphone path {
+  fill: none;
+  stroke-dasharray: 100;
+  stroke-dashoffset:100;
+  animation: draw-line 4.5s ease-in-out infinite;
+}
+
+/* suport animate icon */
+
+/* انیمیشن رسم آیکون پشتیبانی 24 ساعته */
+.animate-draw-support path {
+  fill: none;
+  animation: draw-line 4.5s ease-in-out infinite;
+}
+
+/* ۱. کادر پیام بیرونی (path اول در SVG) */
+.animate-draw-support path:first-child {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation-delay: 0s;
+}
+
+/* ۲. عدد 24 داخل کادر (path دوم در SVG) که با تاخیر رسم می‌شود */
+.animate-draw-support path:last-child {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation-delay: 0.8s;
+}
